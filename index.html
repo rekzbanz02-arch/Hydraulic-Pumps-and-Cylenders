@@ -12,6 +12,9 @@
       color: #fefeff;
     }
     h1 { color: #fefeff; }
+
+    h3 { color: #dedef4; font-size: 16px; font-weight: normal;}
+    
     button {
       padding: 15px 30px;
       font-size: 20px;
@@ -61,7 +64,7 @@
 <body>
   <div id="accessSection">
     <p id="fileDisplay"></p> <!-- NEW filename display -->
-    <h2>Enter Access Code: '12345'</h2>
+    <h3>Enter Access Code: '12345'</h3>
     <div style="position:relative; display:inline-block;">
       <input type="password" id="codeInput" placeholder="Enter code here"
         style="padding-right:45px;">
@@ -95,7 +98,8 @@
 
   <div id="mainContent" style="display:none;">
     <div id="reviewerSection">
-      <h1>Reviewer: Hydraulic Pumps
+      <h1>Reviewer: Hydraulic Pumps
+
 and Cylinders</h1>
  
  
@@ -249,7 +253,8 @@ and Cylinders</h1>
     </div>
 
     <div id="quizSection" style="display:none;">
-      <h1>Quiz: Hydraulic Pumps
+      <h1>Quiz: Hydraulic Pumps
+
 and Cylinders</h1>
       <p style="font-size: 15px; font-weight: 600; margin: 0;">Multiple-Choice Quiz (random items)</p>
       <form id="quizForm"></form>
@@ -763,7 +768,8 @@ function updateQuizTitleCount(selectedCount) {
   const quizTitleEl = document.querySelector("#quizSection h1");
   if (quizTitleEl) {
     const totalItems = pool.filter(item => item && item.q && item.choices).length;
-    quizTitleEl.textContent = `Quiz: Hydraulic Pumps
+    quizTitleEl.textContent = `Quiz: Hydraulic Pumps
+
 and Cylinders (${selectedCount}/${totalItems} items)`;
   }
 }
@@ -872,4 +878,5 @@ and Cylinders (${selectedCount}/${totalItems} items)`;
 </script>
 </body>
 </html>
+
 
